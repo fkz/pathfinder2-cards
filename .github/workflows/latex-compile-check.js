@@ -263,7 +263,14 @@ async function main() {
           annotation_level: finding.type === "typesetting" ? "notice" : finding.type,
           message: finding.text
         }
-      })
+      }),
+      actions: [
+        { 
+            label: "Hide annotations",
+            description: "Remove annotations, so the files view is cleaner",
+            identifier: "hide-annotations"
+        }
+      ]
     }
   };
 
