@@ -11,6 +11,11 @@ jobs:
   create-check:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout latex-compile-check.js
+        uses: actions/checkout@v3
+        with:
+          sparse-checkout: .github/workflows/latex-compile-check.js
+          sparse-checkout-cone-mode: false
       - name: Download compile logs
         uses: actions/github-script@v6
         with:
