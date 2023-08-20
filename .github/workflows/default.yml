@@ -40,3 +40,6 @@ jobs:
     name: Generate website
     uses: ./.github/workflows/gh-pages.yml
     needs: compile
+  checks:
+    uses: ./.github/workflows/latex-compile-check.yml
+    needs: compile
